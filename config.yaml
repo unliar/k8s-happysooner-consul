@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: happy-consul-deployment
+spec:
+  selector:
+    matchLabels:
+      app: happy-consul
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: happy-consul
+    spec:
+      containers:
+        - name: happy-consul
+          image: consul:latest
+          env:
+            - name: HOST_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+---
+
