@@ -20,5 +20,11 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: status.hostIP
+          args:
+            - "agent"
+            - "-dev"
+          ports:
+            - containerPort: 8500
+              name: "ui"
 ---
 
