@@ -1,2 +1,2 @@
 # k8s-happysooner-consul
-deploy dev consule agent for happysooner
+deploy a dev consul agent for happysooner
