@@ -30,9 +30,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: happy-consul #Service 的名称
+  name: happy-consul-srv #Service 的名称
   labels: #Service 自己的标签
-    app: happy-consul #为该 Service 设置 key 为 app，value 为 nginx 的标签
+    app: happy-consul-srv #为该 Service 设置 key 为 app，value 为 nginx 的标签
 spec: #这是关于该 Service 的定义，描述了 Service 如何选择 Pod，如何被访问
   selector: #标签选择器
     app: happy-consul #选择包含标签 app:nginx 的 Pod
