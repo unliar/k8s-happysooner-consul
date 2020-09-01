@@ -19,6 +19,8 @@ spec:
             - "agent"
             - "-dev"
             - "-node=happy-consul-dc"
+            - "-bind=0.0.0.0"
+            - "-client=0.0.0.0"
           ports:
             - containerPort: 8500
           # lifecycle:
