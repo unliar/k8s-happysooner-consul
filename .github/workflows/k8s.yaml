@@ -1,0 +1,17 @@
+name: k8s
+
+on: push
+
+jobs:
+  deploy:
+    name: k8s-deplpy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: k3s-apply-config
+        uses: steebchen/kubectl@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        with:
+          # args: apply -f ./config.yaml
+          args: get nodes
