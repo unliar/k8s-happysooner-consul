@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: happy-consul
-          image: consul:latest
+          image: hashicorp/consul
           args:
             - "agent"
             - "-dev"
