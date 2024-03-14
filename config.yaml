@@ -17,11 +17,13 @@ spec:
           image: hashicorp/consul
           args:
             - "agent"
-            - "-dev"
+            - "-server"
             - "-data-dir=/data"
             - "-node=happy-consul-dc"
             - "-bind=0.0.0.0"
             - "-client=0.0.0.0"
+            - "-bootstrap"
+            - "-ui"
           ports:
             - containerPort: 8500
           volumeMounts:
