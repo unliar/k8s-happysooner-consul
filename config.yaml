@@ -21,8 +21,12 @@ spec:
             - "-node=happy-consul-dc"
             - "-bind=0.0.0.0"
             - "-client=0.0.0.0"
+            - "-config-dir=/data"
           ports:
             - containerPort: 8500
+          volumeMounts:
+            - name: volume
+              mountPath: /data
           # lifecycle:
           #   preStop:
           #     exec:
@@ -30,6 +34,10 @@ spec:
           #         - /bin/sh
           #         - -c
           #         - consul leave
+      volumes:
+        - name: volume
+          hostPath:
+            path: /data
 ---
 apiVersion: v1
 kind: Service
