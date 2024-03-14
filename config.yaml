@@ -18,10 +18,10 @@ spec:
           args:
             - "agent"
             - "-dev"
+            - "-data-dir=/data"
             - "-node=happy-consul-dc"
             - "-bind=0.0.0.0"
             - "-client=0.0.0.0"
-            - "-config-dir=/data"
           ports:
             - containerPort: 8500
           volumeMounts:
