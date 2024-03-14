@@ -36,8 +36,8 @@ spec:
           #         - consul leave
       volumes:
         - name: volume
-          hostPath:
-            path: /data
+          persistentVolumeClaim:
+            claimName: local-path-pvc
 ---
 apiVersion: v1
 kind: Service
