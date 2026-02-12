@@ -56,4 +56,4 @@ spec: #这是关于该 Service 的定义，描述了 Service 如何选择 Pod，
       port: 8500 #集群内的其他容器组可通过 8500 端口访问 Service
       #nodePort: 32767 #通过任意节点的 40000 端口访问 Service
       targetPort: 8500 #将请求转发到匹配 Pod 的端口
-  type: NodePort #Serive的类型，ClusterIP/NodePort/LoaderBalancer
+  type: LoaderBalancer #Serive的类型，ClusterIP/NodePort/LoaderBalancer
